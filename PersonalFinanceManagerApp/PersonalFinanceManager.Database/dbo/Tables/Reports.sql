@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Reports]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[ReportType] INT NOT NULL,
+	[GeneratedDate] DATETIME NOT NULL,
+	[Body] VARCHAR(MAX) NULL,
+	[UserId] INT NOT NULL,
+	FOREIGN KEY([UserId]) REFERENCES Users(UserId),
+)
